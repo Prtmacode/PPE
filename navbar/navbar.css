@@ -1,0 +1,92 @@
+/* === NAVBAR === */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2c3e50;
+  padding: 12px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  background-color: #34495e;
+  color: #ffcc00;
+}
+
+/* === Logout Button === */
+.logout-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* === Mobile Toggle === */
+.navbar-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
+    background-color: #2c3e50;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .navbar-links a {
+    padding: 12px 20px;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}

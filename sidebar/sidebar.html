@@ -1,0 +1,29 @@
+<!-- sidebar.html -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h2>PPE Cam</h2>
+  </div>
+  <ul class="sidebar-links">
+    <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
+    <li>
+      <a href="/jenis-pelanggaran/jenispelanggaran.html">Jenis Pelanggaran</a>
+    </li>
+    <li><a href="/manajemen-kamera/manajemen.html">Manajemen Kamera</a></li>
+    <li><a href="/web/web.html">Web</a></li>
+  </ul>
+  <div class="sidebar-footer">
+    <button class="logout-btn" id="logoutBtn">Logout</button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const logoutBtn = document.getElementById("logoutBtn");
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", function () {
+        localStorage.removeItem("token"); // hapus token jika digunakan
+        window.location.href = "/index.html"; // arahkan ke root/index.html
+      });
+    }
+  });
+</script>

@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "c8a3731e-fc8d-471e-b826-faff0d912710",
+		"name": "SMART GATE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16908395"
+	},
+	"item": [
+		{
+			"name": "Text to Voice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teks\": \"IPUL KONTOL, SILAKAN KAROKE LAGI, IPUL KONTOL, SILAKAN KAROKE LAGI\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://100.81.27.112:3000/bicara",
+					"protocol": "http",
+					"host": [
+						"100",
+						"81",
+						"27",
+						"112"
+					],
+					"port": "3000",
+					"path": [
+						"bicara"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Control Lampu Merah",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://100.81.27.112:3000/lampu/1/off",
+					"protocol": "http",
+					"host": [
+						"100",
+						"81",
+						"27",
+						"112"
+					],
+					"port": "3000",
+					"path": [
+						"lampu",
+						"1",
+						"off"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Control Lampu Hijau",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://100.81.27.112:3000/lampu/2/on",
+					"protocol": "http",
+					"host": [
+						"100",
+						"81",
+						"27",
+						"112"
+					],
+					"port": "3000",
+					"path": [
+						"lampu",
+						"2",
+						"on"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Snapshot",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://100.81.27.112:3000/snapshot",
+					"protocol": "http",
+					"host": [
+						"100",
+						"81",
+						"27",
+						"112"
+					],
+					"port": "3000",
+					"path": [
+						"snapshot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Url Stream",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://100.81.27.112:3000/url_stream",
+					"protocol": "http",
+					"host": [
+						"100",
+						"81",
+						"27",
+						"112"
+					],
+					"port": "3000",
+					"path": [
+						"url_stream"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
